@@ -188,6 +188,7 @@ class Website extends React.Component {
       }, 300);
       return true;
     };*/
+    var backgroundColor = website !== "" ? "" : "blue";
     return (
       <View
         style={{
@@ -201,7 +202,7 @@ class Website extends React.Component {
           boxShadow: `inset 0px 0px ${highAndTight ? 70 : 0}px ${
             highAndTight ? 1 : 0
           }px rgb(200,200,200)`,
-          transition: ".1s ease-in"
+          transition: "1s ease-out"
         }}
       >
         <View
@@ -212,7 +213,8 @@ class Website extends React.Component {
             border: `${website === "" || loadedSite ? 0 : 3}px solid blue`,
             borderRadius: "5px",
             transform: website !== "" ? "translateY(0%)" : "translateY(-100%)",
-            transition: ".3s ease-in"
+            transition: "1.5s ease-out",
+            backgroundColor
           }}
         >
           <Text
